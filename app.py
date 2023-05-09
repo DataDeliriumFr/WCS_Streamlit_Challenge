@@ -12,7 +12,7 @@ df = pd.read_csv(link)
 
 # User input
 df["continent"] = df["continent"].astype(str)
-df["continent"] = df["continent"].str.strip(".").str.strip()
+df["continent"] = df["continent"].str.replace(".", "").str.strip()
 continents = df["continent"].unique().tolist()
 
 user_continent = st.radio("Select a continent to filter on :", continents)
