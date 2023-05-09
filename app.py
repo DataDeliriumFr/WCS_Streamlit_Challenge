@@ -14,6 +14,7 @@ df = pd.read_csv(link)
 df["continent"] = df["continent"].str.strip(".").str.strip()
 continents = df["continent"].unique().tolist()
 user_continent = st.radio("Select a continent to filter on :", continents)
+df["continent"] = df["continent"].astype("category")
 df_selected = df[df["continent"].str.contains(user_continent)]
 
 # Display graph 1
