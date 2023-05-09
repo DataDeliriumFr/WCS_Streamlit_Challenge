@@ -26,7 +26,7 @@ plt.title(f"Correlation heatmap of{user_continent}")
 col1, col2 = st.columns(2)
 with col1:
     st.write(
-        f'This heatmap shows correlation between variables for {user_continent} using a divengent color palette.')
+        f"This heatmap shows correlation between variables for {user_continent} using a divengent color palette.")
 with col2:
     st.pyplot(heatmap.figure)
 
@@ -40,6 +40,6 @@ plt.title(f"Distribution of cars by weight in{user_continent}")
 col1, col2 = st.columns(2)
 with col1:
     st.write(
-        f'This histogram shows the distribution of cars by weights (lbs) in {user_continent}.')
+        f"This histogram shows the distribution of cars by weights (lbs) in {user_continent}.")
 with col2:
     st.pyplot(fig)
