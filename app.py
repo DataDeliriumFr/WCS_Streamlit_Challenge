@@ -16,7 +16,7 @@ df["continent"] = df["continent"].str.strip(".").str.strip()
 continents = df["continent"].unique().tolist()
 
 user_continent = st.radio("Select a continent to filter on :", continents)
-df_selected = df[df["continent"].str.contains(user_continent)]
+df_selected = df.query("continent == @user_continent")
 
 # Display graph 1
 st.header("Graph 1")
