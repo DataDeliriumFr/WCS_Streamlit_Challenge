@@ -20,7 +20,7 @@ df_selected = df.query("continent == @user_continent")
 
 # Display graph 1
 st.header("Graph 1")
-heatmap = sns.heatmap(data=df_selected.corr(),
+heatmap = sns.heatmap(data=df_selected.select_dtypes(include="number").corr(),
                       cmap="coolwarm",
                       center=0)
 plt.title(f"Correlation heatmap of {user_continent}")
